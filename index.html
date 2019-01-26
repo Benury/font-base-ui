@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/layui/css/layui.css">
+    <link rel="stylesheet" href="./index.css?t=323">
+   
+</head>
+<body>
+    <div class="left">
+        <ul>
+            <li>
+                <strong class="title">基本元素</strong>
+                <ul class="children">
+                    <li><a href="#button">按钮</a></li>
+                    <li><a href="#input">表单</a></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li>
+                <strong class="title">常用布局</strong>
+                <ul class="children">
+                    <li><a>按钮</a></li>
+                    <li><a>表单</a></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <section id="button" class="layui-clear">
+            <div class="title">按钮</div>
+            <div class="demo">
+                <iframe src="./Demo/base/button.html" frameborder="0"></iframe>
+            </div>
+            <div class="code ">                
+                <pre lay-title="html" class="layui-code">
+                       <button class="z-button">按钮</button>                                         
+                </pre>     
+            </div>
+            <div class="code ">                
+                    <pre lay-title="css" class="layui-code">
+                            /* 清除默认样式，全局 */
+                            button{  /* 按钮公共样式 */
+                                border-width: 0px; /* 边框宽度 */
+                            }
+                            .z-button{ 
+                                width: 270px; /* 宽度 */
+                                height: 40px; /* 高度 */ 
+                                border-radius: 3px; /* 边框半径 */
+                                background: #1E90FF; /* 背景颜色 */    
+                                font-size:16px;   
+                                color: white; /* 字体颜色 */   
+                            }
+                            .z-button:hover{
+                                background: #5599FF;
+                            }
+                    </pre>     
+            </div>
+        </section>
+       
+        <section id="input" class="layui-clear">
+                <div class="title">input</div>
+                <div class="demo">
+                    <iframe src="./Demo/base/input.html" frameborder="0"></iframe>
+                </div>
+                <div class="code ">                
+                    <pre lay-title="html" class="layui-code">
+                            <input class="z-input" type="text"  placeholder="请输入脚本">
+
+                    </pre>     
+                </div>
+                <div class="code ">                
+                        <pre lay-title="css" class="layui-code">
+                                input{
+                                    outline: none;
+                                }
+                                .z-input{
+                                    width:100%;
+                                    padding:0 10px;
+                                    font-size:16px;
+                                    height:32px;
+                                    border-radius:3px;
+                                    border:1px solid #c8cccf;
+                                    color:#6a6f77; 
+                                }
+                                .z-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                                    color:    #909;
+                                }
+                                .z-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                                   color:    #909;
+                                }
+                                .z-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+                                   color:    #909;
+                                }
+                                .z-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                                   color:    #909;
+                                }
+                        </pre>     
+                </div>
+        </section>
+       
+    </div>
+</body>
+<script src="libs/layui/layui.all.js"></script>
+<script>
+layui.use(['code'], function(){ //加载code模块
+  layui.code({
+    encode: true,
+    height: '300px'
+  }); //引用code方法
+
+});
+
+</script>
+</html>

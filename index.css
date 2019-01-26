@@ -1,0 +1,77 @@
+html,body{
+    padding:0;
+    margin:0;
+
+}
+ul,li{
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+}
+.clearfix{
+    content:'';
+    display: table;
+    clear: both;
+}
+.left{
+    left:0;
+    width:200px;
+    top:0;
+    bottom:0;
+    position: absolute;
+    border-right:1px solid #ccc;
+    overflow: auto;
+    padding:20px;
+}
+
+.right{
+    left:200px;
+    top:0;
+    bottom:0;
+    right:0;
+    position: absolute;
+    overflow: auto;
+
+}
+
+.children{
+    padding-left:20px;
+}
+.children li{
+    padding:5px 0;
+    color:#333;
+    cursor: pointer;
+}
+
+.right section{
+    min-height:200px;
+    margin-bottom:30px;
+
+}
+.right section .title{
+    padding:5px 10px;
+    line-height: 20px;
+    background: #f5f5f5;
+    
+}
+.right section .demo{
+    height:200px;
+    overflow: auto;
+    border:1px solid #f5f5f5;
+}
+/* .right section .code{
+    min-height:200px;
+    overflow: auto;
+    
+} */
+.right section .code{
+    float: left;
+    width:50%;
+}
+.right section iframe{
+    width:100%;
+}
+.layui-code-view .layui-code-ol{
+    height:300px;
+}
